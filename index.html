@@ -1,11 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auction website</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auction website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container" role="banner">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        "
+      >
+        <h1>Auction</h1>
+        <nav aria-label="Main navigation">
+          <a href="#auctions" style="margin-right: 12px">Auctions</a>
+          <a href="#how-it-works">How it works</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <section class="hero mt-16">
+        <h2>Welcome to the Auction House</h2>
+        <p class="mt-8">
+          Discover unique items and bid in real-time. Below are some sample
+          listings to get started.
+        </p>
+        <div class="mt-16">
+          <a class="btn" href="#auctions">Browse Auctions</a>
+          <a class="btn secondary" href="#how-it-works" style="margin-left: 8px"
+            >Learn More</a
+          >
+        </div>
+      </section>
+
+      <section id="auctions" class="mt-16">
+        <h3>Active Auctions</h3>
+        <div
+          class="auctions-grid mt-8"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+          "
+        >
+          <article
+            class="card"
+            style="padding: 12px; border: 1px solid #e6e6ef; border-radius: 8px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=60"
+              alt="Vintage lamp"
+            />
+            <h4 class="mt-8">Vintage Brass Lamp</h4>
+            <p class="mt-8">Current bid: $45</p>
+            <div class="mt-8"><button class="btn">Place Bid</button></div>
+          </article>
+
+          <article
+            class="card"
+            style="padding: 12px; border: 1px solid #e6e6ef; border-radius: 8px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=60"
+              alt="Signed book"
+            />
+            <h4 class="mt-8">Signed First Edition</h4>
+            <p class="mt-8">Current bid: $120</p>
+            <div class="mt-8"><button class="btn">Place Bid</button></div>
+          </article>
+
+          <article
+            class="card"
+            style="padding: 12px; border: 1px solid #e6e6ef; border-radius: 8px"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518544882115-3fc1f6f2d1d3?auto=format&fit=crop&w=800&q=60"
+              alt="Antique watch"
+            />
+            <h4 class="mt-8">Antique Pocket Watch</h4>
+            <p class="mt-8">Current bid: $250</p>
+            <div class="mt-8"><button class="btn">Place Bid</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="mt-16">
+        <h3>How it works</h3>
+        <ol class="mt-8">
+          <li>Browse listings and select an item.</li>
+          <li>Place a bid — the highest bidder wins when the auction ends.</li>
+          <li>Pay and arrange pickup or delivery.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="container mt-16" role="contentinfo">
+      <p>© <span id="year"></span> Auction Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Small script to set current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
